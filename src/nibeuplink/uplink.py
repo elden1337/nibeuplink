@@ -80,17 +80,17 @@ class Uplink:
 
     async def get(self, url, *args, **kwargs):
         return await self.session.request(
-            "GET", f"{self.base}/api/v1/{url}", *args, **kwargs
+            "GET", f"{self.base}/v2/{url}", *args, **kwargs
         )
 
     async def put(self, url, *args, **kwargs):
         return await self.session.request(
-            "PUT", f"{self.base}/api/v1/{url}", *args, **kwargs
+            "PUT", f"{self.base}/v2/{url}", *args, **kwargs
         )
 
     async def post(self, url, *args, **kwargs):
         return await self.session.request(
-            "POST", f"{self.base}/api/v1/{url}", *args, **kwargs
+            "POST", f"{self.base}/v2/{url}", *args, **kwargs
         )
 
     async def get_parameter_raw(self, system_id: int, parameter_id: ParameterId) -> Optional[ParameterType]:
